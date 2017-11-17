@@ -53,7 +53,7 @@ def solution(options):
                 new_user.username = options.username
                 new_user.set_email()
                 new_user.set_password(options.password, None)
-                #print(new_user.__dict__)
+                # print(new_user.__dict__)
                 mysql_connection(new_user.save_to_db)
 
         # handle existing user
@@ -92,6 +92,6 @@ if __name__ == "__main__":
 
     solution(set_options())
 
-# options to obiekt Namespace, gdzie username, password itd. stają się atrybutami, wartość domyślna = false, jeżeli użyjemy - true
-# jeżeli przy odpalaniu tego pliku w terminalu użyjesz flagi -p, -u, -p, -t
-# wartość przechowywana w options.movies, options.cinemas, options.payments i options.tickets będzie True
+# options to obiekt Namespace, gdzie username, password itd. stają się atrybutami
+# jeżeli akcja store, wartość podana w terminalu zostaje przypisana do argumentu
+# jeżeli akcja store_true atrybut staje się flagą, przelacznikiem True-False (tu edit lub delete)

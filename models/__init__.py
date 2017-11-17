@@ -46,10 +46,9 @@ class User:
             return True
         else:
             sql = "UPDATE Users SET username=%s, email=%s, hashed_password=%s WHERE id={}".format(self.id)
-            print("sql", sql)
             values = (self.username, self.email, self.hashed_password)
+            # print("sql", sql)
             cursor.execute(sql, values)
-            print("sql", sql)
             return True
 
 
